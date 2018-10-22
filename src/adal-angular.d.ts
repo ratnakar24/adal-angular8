@@ -7,10 +7,6 @@ declare module 'adal-angular' {
 declare var AuthenticationContext: adal.AuthenticationContextStatic;
 declare var Logging: adal.Logging;
 
-declare module 'adal' {
-    export = { AuthenticationContext, Logging };
-}
-
 declare namespace adal {
 
     /**

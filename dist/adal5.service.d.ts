@@ -1,4 +1,4 @@
-import { adal } from 'adal-angular';
+import 'adal-angular';
 import { Adal5User } from './adal5-user';
 import { Observable } from 'rxjs/Rx';
 /**
@@ -16,6 +16,7 @@ export declare class Adal5Service {
      * @memberOf Adal5Service
      */
     private adalContext;
+    private loginRefreshTimer;
     /**
      *
      *
@@ -165,4 +166,20 @@ export declare class Adal5Service {
      * @memberOf Adal5Service
      */
     private updateDataFromCache(resource);
+    /**
+     *
+     *
+     *
+     * @memberOf Adal5Service
+     */
+    private refreshLoginToken();
+    private now();
+    private readonly isInCallbackRedirectMode;
+    /**
+       *
+       *
+       *
+       * @memberOf Adal5Service
+       */
+    private setupLoginTokenRefreshTimer();
 }

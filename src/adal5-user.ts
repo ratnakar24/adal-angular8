@@ -10,4 +10,5 @@ export class Adal5User {
     error: string;
     profile: any;
     token: string;
+    loginCached: boolean;
 }
