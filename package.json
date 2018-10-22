@@ -1,5 +1,5 @@
 {
-    "name": "adal-angular5",
+    "name": "adal-ng5",
     "version": "1.0.37",
     "description": "ADAL wrapper for Angular5.",
     "main": "index.js",
@@ -9,18 +9,20 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/grumar/adal-angular5.git"
+        "url": "git+https://github.com/SalimDr/adal-angular5.git"
     },
     "keywords": [
         "adal",
-        "angular4"
+        "angular5",
+        "adfs",
+        "AzureAD"
     ],
-    "author": "Ben Baran",
+    "author": "Salim Draoui",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/grumar/adal-angular5/issues"
+        "url": "https://github.com/SalimDr/adal-angular5/issues"
     },
-    "homepage": "https://github.com/grumar/adal-angular5#readme",
+    "homepage": "https://github.com/SalimDr/adal-angular5#readme",
     "dependencies": {
         "@angular/common": "^5.0.0",
         "@angular/core": "^5.0.0",
