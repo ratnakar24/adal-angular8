@@ -329,11 +329,13 @@ export class Adal5Service {
       this.adal5User.profile = user.profile;
       this.adal5User.token = token;
       this.adal5User.error = this.adalContext.getLoginError();
+      this.adal5User.loginCached = true;
     } else {
       this.adal5User.username = '';
       this.adal5User.profile = {};
       this.adal5User.token = '';
       this.adal5User.error = '';
+      this.adal5User.loginCached = false;
     }
   };
 
