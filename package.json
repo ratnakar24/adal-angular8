@@ -1,10 +1,9 @@
 {
     "name": "adal-ng5",
-    "version": "1.1.0",
+    "version": "1.1.4",
     "description": "ADAL wrapper for Angular5.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "compile": "node_modules/.bin/ngc -p tsconfig-aot.json"
     },
     "repository": {
@@ -32,6 +31,7 @@
         "zone.js": "^0.8.14"
     },
     "devDependencies": {
+        "@angular/cli": "~1.7.2",
         "@angular/compiler": "^5.0.0",
         "@types/jasmine": "^2.5.53",
         "codelyzer": "^3.1.2",
@@ -43,7 +43,12 @@
         "gulp": "^3.9.1",
         "gulp-bump": "^2.7.0",
         "gulp-typescript": "^3.1.6",
+        "jasmine": "^3.3.0",
         "jshint": "^2.9.4",
+        "karma": "^3.1.1",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-jasmine": "^1.1.2",
+        "karma-typescript": "^3.0.13",
         "merge2": "^1.0.3",
         "tslint": "^5.7.0",
         "typescript": "^2.4.2"

@@ -4,7 +4,15 @@ var bump = require('gulp-bump'),
     gulp = require('gulp'),
     merge = require('merge2'),
     typescript = require('gulp-typescript'),
-    fs = require('fs');
+    fs = require('fs'),
+    Server = require('karma').Server;
+
+gulp.task('test', function(done){
+    new Server({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, done).start();
+})
 
 gulp.task('clean', function () {
     del(['dist/*']);
@@ -32,7 +40,7 @@ gulp.task('bundle', ['bump'], function () {
             moduleResolution: "node",
             removeComments: false,
             lib: [
-                "es2015",
+                "es2017",
                 "dom"
             ],
             types: ["jasmine"]

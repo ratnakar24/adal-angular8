@@ -7,15 +7,15 @@
     "outDir": "dist/",
     "rootDir": "src/",
     "sourceMap": true,
-    " declaration": true,
+    "declaration": false,
     "moduleResolution": "node",
     "removeComments": false,
     "lib": [
-      "es2015",
+      "es2017",
       "dom"
     ],
     "types": [
-      "adal"
+      "jasmine"
     ],
     "exclude": [
       "node_modules",
@@ -26,7 +26,7 @@
     ],
     "skipLibCheck": false,
      "globalDependencies": {
-        "adal": "file:./src/adal.d.ts"
+        "adal": "file:./src/adal-angular.d.ts"
     }
   }
 }

@@ -1,5 +1,4 @@
 import { TestBed, inject } from '@angular/core/testing';
-
 import { Adal5Service } from './adal5.service';
 
 describe('Adal5Service', () => {
