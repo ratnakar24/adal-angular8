@@ -7,7 +7,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var adalLib = require("adal-angular");
-require("adal-angular");
 var core_1 = require("@angular/core");
 var Rx_1 = require("rxjs/Rx");
 /**
