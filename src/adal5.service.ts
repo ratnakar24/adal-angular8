@@ -152,7 +152,7 @@ export class Adal5Service {
       this.adalContext.saveTokenFromHash(requestInfo);
       if (requestInfo.requestType === this.adalContext.REQUEST_TYPE.LOGIN) {
         this.updateDataFromCache(this.adalContext.config.loginResource);
-
+        this.setupLoginTokenRefreshTimer();
       } else if (requestInfo.requestType === this.adalContext.REQUEST_TYPE.RENEW_TOKEN) {
         this.adalContext.callback = window.parent.callBackMappedToRenewStates[requestInfo.stateResponse];
       }
@@ -298,8 +298,23 @@ export class Adal5Service {
    *
    * @memberOf Adal5Service
    */
-  public GetResourceForEndpoint(url: string): string {
+  public getResourceForEndpoint(url: string): string {
     return this.adalContext.getResourceForEndpoint(url);
+  }
+
+  /**
+   *
+   *
+   * @returns {string}
+   *
+   * @memberOf Adal5Service
+   */
+  public getToken(): string {
+    if(this.adalContext){
+      return this.adalContext._getItem(this.adalContext.CONSTANTS.STORAGE.ACCESS_TOKEN_KEY + this.adalContext.config.loginResource);
+    } else {
+      this.adal5User.token;
+    }
   }
 
   /**
@@ -349,6 +364,7 @@ export class Adal5Service {
     if (!this.adal5User.loginCached) throw ("User not logged in");
     this.acquireToken(<any>this.adalContext.config.loginResource).subscribe((token: string) => {
         this.adal5User.token = token;
+        this.userInfo.token = token;
         if (this.adal5User.authenticated == false) {
             this.adal5User.authenticated = true;
             this.adal5User.error = '';

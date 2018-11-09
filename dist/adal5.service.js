@@ -139,6 +139,7 @@ var Adal5Service = (function () {
             this.adalContext.saveTokenFromHash(requestInfo);
             if (requestInfo.requestType === this.adalContext.REQUEST_TYPE.LOGIN) {
                 this.updateDataFromCache(this.adalContext.config.loginResource);
+                this.setupLoginTokenRefreshTimer();
             }
             else if (requestInfo.requestType === this.adalContext.REQUEST_TYPE.RENEW_TOKEN) {
                 this.adalContext.callback = window.parent.callBackMappedToRenewStates[requestInfo.stateResponse];
@@ -275,8 +276,23 @@ var Adal5Service = (function () {
      *
      * @memberOf Adal5Service
      */
-    Adal5Service.prototype.GetResourceForEndpoint = function (url) {
+    Adal5Service.prototype.getResourceForEndpoint = function (url) {
         return this.adalContext.getResourceForEndpoint(url);
+    };
+    /**
+     *
+     *
+     * @returns {string}
+     *
+     * @memberOf Adal5Service
+     */
+    Adal5Service.prototype.getToken = function () {
+        if (this.adalContext) {
+            return this.adalContext._getItem(this.adalContext.CONSTANTS.STORAGE.ACCESS_TOKEN_KEY + this.adalContext.config.loginResource);
+        }
+        else {
+            this.adal5User.token;
+        }
     };
     /**
      *
@@ -327,6 +343,7 @@ var Adal5Service = (function () {
             throw ("User not logged in");
         this.acquireToken(this.adalContext.config.loginResource).subscribe(function (token) {
             _this.adal5User.token = token;
+            _this.userInfo.token = token;
             if (_this.adal5User.authenticated == false) {
                 _this.adal5User.authenticated = true;
                 _this.adal5User.error = '';

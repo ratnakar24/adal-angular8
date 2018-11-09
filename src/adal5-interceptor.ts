@@ -10,7 +10,7 @@ export class Adal5Interceptor implements HttpInterceptor {
 
         request = request.clone({
             setHeaders: {
-                Authorization: `Bearer ${this.adal5Service.userInfo.token}`
+                Authorization: `Bearer ${this.adal5Service.getToken()}`
             }
         });
         return next.handle(request);

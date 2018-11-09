@@ -190,7 +190,7 @@ export class Adal5HTTPService {
     withCredentials?: boolean;
   }): Observable<string> {
 
-    const resource = this.service.GetResourceForEndpoint(url);
+    const resource = this.service.getResourceForEndpoint(url);
     let authenticatedCall: Observable<string>;
     if (resource) {
       if (this.service.userInfo.authenticated) {

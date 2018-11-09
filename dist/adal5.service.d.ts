@@ -149,7 +149,15 @@ export declare class Adal5Service {
      *
      * @memberOf Adal5Service
      */
-    GetResourceForEndpoint(url: string): string;
+    getResourceForEndpoint(url: string): string;
+    /**
+     *
+     *
+     * @returns {string}
+     *
+     * @memberOf Adal5Service
+     */
+    getToken(): string;
     /**
      *
      *
