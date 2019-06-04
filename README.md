@@ -1,10 +1,9 @@
-# adal-angular5
-![build status](https://travis-ci.org/grumar/adal-angular5.svg?branch=master)
-
+# adal-angular8
+![build status](https://travis-ci.org/Macadoshis/adal-angular5.svg?branch=master)
 
 ___
 
-Angular 5 Active Directory Authentication Library (ADAL) wrapper package. Can be used to authenticate Angular 5 applications to Azure Active Directory.
+Angular 8+ Active Directory Authentication Library (ADAL) wrapper package. Can be used to authenticate Angular 8+ applications to Azure Active Directory.
 
 Based on https://github.com/benbaran/adal-angular4.
 

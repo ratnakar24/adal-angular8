@@ -1,5 +1,4 @@
-
-// Typings needed for using ADAL with Angular 5
+// Typings needed for using ADAL with Angular 8+
 declare module 'adal-angular' {
     export function inject(config: adal.Config): adal.AuthenticationContext;
 }
@@ -10,8 +9,8 @@ declare var Logging: adal.Logging;
 declare namespace adal {
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface Config
      */
     interface Config {
@@ -35,8 +34,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface User
      */
     interface User {
@@ -45,8 +44,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface RequestInfo
      */
     interface RequestInfo {
@@ -58,8 +57,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface Logging
      */
     interface Logging {
@@ -68,8 +67,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @enum {number}
      */
     enum LoggingLevel {
@@ -80,8 +79,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface AuthenticationContextStatic
      */
     interface AuthenticationContextStatic {
@@ -89,8 +88,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface AuthenticationContext
      */
     interface AuthenticationContext {
@@ -208,24 +207,28 @@ declare namespace adal {
         getResourceForEndpoint(endpoint: string): string;
 
         /**
-         * Handles redirection after login operation. 
+         * Handles redirection after login operation.
          * Gets access token from url and saves token to the (local/session) storage
          * or saves error in case unsuccessful login.
          */
         handleWindowCallback(): void;
 
         log(level: number, message: string, error: any): void;
+
         error(message: string, error: any): void;
+
         warn(message: string): void;
+
         info(message: string): void;
+
         verbose(message: string): void;
     }
 
 }
 
 /**
- * 
- * 
+ *
+ *
  * @interface Window
  */
 interface Window {

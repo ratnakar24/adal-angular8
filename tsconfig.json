@@ -1,32 +1,29 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "noImplicitAny": true,
-    "experimentalDecorators": true,
-    "outDir": "dist/",
-    "rootDir": "src/",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "removeComments": false,
-    "lib": [
-      "es2017",
-      "dom"
-    ],
-    "types": [
-      "jasmine"
-    ],
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": true,
+        "experimentalDecorators": true,
+        "outDir": "dist/",
+        "rootDir": "src/",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "removeComments": false,
+        "lib": [
+            "es2017",
+            "dom"
+        ],
+        "types": [
+            "jasmine"
+        ],
+        "typeRoots": [
+            "./src"
+        ],
+        "skipLibCheck": false
+    },
     "exclude": [
-      "node_modules",
-      "dist"
-    ],
-    "typeRoots": [
-      "./src"
-    ],
-    "skipLibCheck": false,
-     "globalDependencies": {
-        "adal": "file:./src/adal-angular.d.ts"
-    }
-  }
+        "node_modules",
+        "dist"
+    ]
 }
