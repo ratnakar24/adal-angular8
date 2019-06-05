@@ -101,6 +101,8 @@ export class Gulpfile {
                 delete pkgjson.devDependencies;
                 pkgjson.peerDependencies = pkgjson.dependencies;
                 delete pkgjson.dependencies;
+                pkgjson.dependencies = pkgjson.publishedDependencies;
+                delete pkgjson.publishedDependencies;
                 fs.writeFileSync(`${this.sourceRoot}/dist/package.json`, JSON.stringify(pkgjson, null, 2), 'utf-8');
                 resolve();
             });
