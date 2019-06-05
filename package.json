@@ -1,6 +1,6 @@
 {
     "name": "adal-angular8",
-    "version": "8.0.2",
+    "version": "8.0.5",
     "description": "ADAL wrapper for Angular 8+",
     "main": "index.js",
     "scripts": {
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Macadoshis/adal-angular5.git"
+        "url": "git+https://github.com/Macadoshis/adal-angular8.git"
     },
     "keywords": [
         "adal",
@@ -19,9 +19,9 @@
     "author": "Saad BENBOUZID",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Macadoshis/adal-angular5/issues"
+        "url": "https://github.com/Macadoshis/adal-angular8/issues"
     },
-    "homepage": "https://github.com/Macadoshis/adal-angular5#readme",
+    "homepage": "https://github.com/Macadoshis/adal-angular8#readme",
     "publishedDependencies": {
         "adal-angular": "=1.0.17"
     },
