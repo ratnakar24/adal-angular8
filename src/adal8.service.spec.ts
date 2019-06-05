@@ -1,14 +1,14 @@
 import { inject, TestBed } from '@angular/core/testing';
-import { Adal5Service } from './adal5.service';
+import { Adal8Service } from './adal8.service';
 
-describe('Adal5Service', () => {
+describe('Adal8Service', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [Adal5Service]
+            providers: [Adal8Service]
         });
     });
 
-    it('should ...', inject([Adal5Service], (service: Adal5Service) => {
+    it('should ...', inject([Adal8Service], (service: Adal8Service) => {
         expect(service).toBeTruthy();
     }));
 });

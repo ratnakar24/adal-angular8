@@ -22,31 +22,31 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 ...
     imports: [..., HttpClientModule  ], // important! HttpClientModule replaces HttpModule
     providers: [
-        Adal5Service,
-        { provide: Adal5HTTPService, useFactory: Adal5HTTPService.factory, deps: [HttpClient, Adal5Service] } //  // important! HttpClient replaces Http
+        Adal8Service,
+        { provide: Adal8HTTPService, useFactory: Adal8HTTPService.factory, deps: [HttpClient, Adal8Service] } //  // important! HttpClient replaces Http
   ]
 ```
 
 ## Example
 
 ```typescript
-import { Adal5HTTPService, Adal5Service } from 'adal-angular5';
+import { Adal8HTTPService, Adal8Service } from 'adal-angular8';
 ...
 export class HttpService {
     constructor(
-        private adal5HttpService: Adal5HTTPService,
-        private adal5Service: Adal5Service) { }
+        private adal8HttpService: Adal8HTTPService,
+        private adal8Service: Adal8Service) { }
 
 public get(url: string): Observable<any> {
         const options = this.prepareOptions();
-        return this.adal5HttpService.get(url, options)
+        return this.adal8HttpService.get(url, options)
     }
     
 private prepareOptions():any{
  let headers = new HttpHeaders();
         headers = headers
             .set('Content-Type', 'application/json')
-            .set('Authorization', `Bearer ${this.adal5Service.userInfo.token}`);
+            .set('Authorization', `Bearer ${this.adal8Service.userInfo.token}`);
         return { headers };
 }
 ```        

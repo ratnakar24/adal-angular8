@@ -69,11 +69,11 @@ export class Gulpfile {
                     tsResult.js.pipe(gulp.dest('dist/'))
                 ]);
                 setTimeout(() => {
-                    // FIXME : hack : add "import { adal } from 'adal-angular';" to adal5.service.d.ts
-                    const adal5ServiceFileName: string = `${this.sourceRoot}/dist/adal5.service.d.ts`;
-                    let adal5ServiceFile: string = fs.readFileSync(adal5ServiceFileName, 'utf8');
-                    adal5ServiceFile = `import { adal } from 'adal-angular';\r\n${adal5ServiceFile}`;
-                    fs.writeFileSync(adal5ServiceFileName, adal5ServiceFile, 'utf-8');
+                    // FIXME : hack : add "import { adal } from 'adal-angular';" to adal8.service.d.ts
+                    const adal8ServiceFileName: string = `${this.sourceRoot}/dist/adal8.service.d.ts`;
+                    let adal8ServiceFile: string = fs.readFileSync(adal8ServiceFileName, 'utf8');
+                    adal8ServiceFile = `import { adal } from 'adal-angular';\r\n${adal8ServiceFile}`;
+                    fs.writeFileSync(adal8ServiceFileName, adal8ServiceFile, 'utf-8');
 
                     resolve();
                 }, 5000);

@@ -94,7 +94,7 @@ declare namespace adal {
      */
     interface AuthenticationContext {
 
-        // Additional items for Angular 5
+        // Additional items for Angular 8
         CONSTANTS: any;
 
         REQUEST_TYPE: {
