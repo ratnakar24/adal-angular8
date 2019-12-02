@@ -23,13 +23,13 @@
     },
     "homepage": "https://github.com/Macadoshis/adal-angular8#readme",
     "publishedDependencies": {
-        "adal-angular": "=1.0.17"
+        "adal-angular": "git+https://github.com/ratnakar24/azure-activedirectory-library-for-js.git"
     },
     "dependencies": {
         "@angular/common": "~8.0.0",
         "@angular/core": "~8.0.0",
         "@angular/platform-browser": "~8.0.0",
-        "adal-angular": "=1.0.17",
+        "adal-angular": "git+https://github.com/ratnakar24/azure-activedirectory-library-for-js.git",
         "rxjs": "~6.5.2",
         "tslib": "^1.9.0",
         "zone.js": "~0.9.1"
